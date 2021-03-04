@@ -42,6 +42,7 @@
             this.imgWaldo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgWaldo.TabIndex = 0;
             this.imgWaldo.TabStop = false;
+            this.imgWaldo.Click += new System.EventHandler(this.imgWaldo_Click);
             // 
             // FormWaldo
             // 
@@ -50,8 +51,10 @@
             this.BackgroundImage = global::WaldoFinder.Properties.Resources.waldo_background;
             this.ClientSize = new System.Drawing.Size(784, 451);
             this.Controls.Add(this.imgWaldo);
+            this.DoubleBuffered = true;
             this.Name = "FormWaldo";
             this.Text = "Where\'s Waldo";
+            this.Load += new System.EventHandler(this.FormWaldo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgWaldo)).EndInit();
             this.ResumeLayout(false);
 
